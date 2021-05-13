@@ -27,4 +27,26 @@ kubectl run postgresql-client --rm --tty -i --restart='Never' \
           --env="PGPASSWORD=$POSTGRES_PASSWORD" --command -- psql --host postgresql \
           -U postgres -d postgres -p 5432
 
+
+#Insert data into the test database
+CREATE DATABASE test;
+\c test;
+CREATE TABLE pets (name VARCHAR(20), owner VARCHAR(20), species VARCHAR(20), sex CHAR(1), birth DATE, death DATE);
+INSERT INTO pets VALUES ('Puffball','Diane','hamster','f','2010-03-30',NULL);
+INSERT INTO pets VALUES ('Spike','Mike','pitbull','m','2011-04-28',NULL);
+INSERT INTO pets VALUES ('Ashton','Varoon','German Sheperd','m','2014-06-15',NULL);
+INSERT INTO pets VALUES ('Bear','Chris','Rottweiler','m','2013-10-10',NULL);
+INSERT INTO pets VALUES ('Toby','Jenny','Golden Retriever','m','2019-03-19',NULL);
+
+#Validate the data in the table PETS
+test=# select * from pets;
+name | owner | species | sex | birth | death
+----------+--------+------------------+-----+------------+-------
+Puffball | Diane | hamster | f | 2010-03-30 |
+Spike | Mike | pitbull | m | 2011-04-28 |
+Ashton | Varoon | German Shepherd | m | 2014-06-15 |
+Bear | Chris | Rottweiler | m | 2013-10-10 |
+Toby | Jenny | Golden Retriever | m | 2019-03-19 |
+(5 rows)
+
 ```
