@@ -40,13 +40,13 @@ INSERT INTO pets VALUES ('Toby','Jenny','Golden Retriever','m','2019-03-19',NULL
 
 #Validate the data in the table PETS
 test=# select * from pets;
-name | owner | species | sex | birth | death
+   name   | owner  |     species      | sex |   birth    | death 
 ----------+--------+------------------+-----+------------+-------
-Puffball | Diane | hamster | f | 2010-03-30 |
-Spike | Mike | pitbull | m | 2011-04-28 |
-Ashton | Varoon | German Shepherd | m | 2014-06-15 |
-Bear | Chris | Rottweiler | m | 2013-10-10 |
-Toby | Jenny | Golden Retriever | m | 2019-03-19 |
+ Puffball | Diane  | hamster          | f   | 2010-03-30 | 
+ Spike    | Mike   | pitbull          | m   | 2011-04-28 | 
+ Ashton   | Varoon | German Sheperd   | m   | 2014-06-15 | 
+ Bear     | Chris  | Rottweiler       | m   | 2013-10-10 | 
+ Toby     | Jenny  | Golden Retriever | m   | 2019-03-19 | 
 (5 rows)
 
 ```
