@@ -1,0 +1,17 @@
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: kasten-ingress
+  namespace: kasten-io
+  annotations:
+    kubernetes.io/ingress.class: traefik
+spec:
+  rules:
+  - host: kasten.datasvc01.jear.co
+    http:
+      paths:
+      - backend:
+          serviceName: gateway
+          servicePort: 8000
+        path: /k10/
