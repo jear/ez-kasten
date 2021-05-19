@@ -49,4 +49,10 @@ test=# select * from pets;
  Toby     | Jenny  | Golden Retriever | m   | 2019-03-19 | 
 (5 rows)
 
+
+# Add an S3 backend
+https://github.com/jear/minio
+
+
+
 ```
